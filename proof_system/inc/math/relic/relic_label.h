@@ -272,7 +272,7 @@
 #undef bn_rec_jsf
 #undef bn_rec_glv
 
-#define bn_init 	PREFIX(bn_init)
+#define bn_init 	PREFIX(bn_make)
 #define bn_clean 	PREFIX(bn_clean)
 #define bn_grow 	PREFIX(bn_grow)
 #define bn_trim 	PREFIX(bn_trim)

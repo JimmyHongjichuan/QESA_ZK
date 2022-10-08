@@ -30,11 +30,11 @@ BIN_DIR = bin
 LIB_DIR = lib
 
 # Compiler options
-COMMON_FLAGS = -Wall -Wextra -Wshadow -O3 -fomit-frame-pointer
+COMMON_FLAGS = -Wall -Wextra -Wshadow  -fomit-frame-pointer
 C_FLAGS = -std=c99
 CXX_FLAGS = -std=c++17
 DEBUG_FLAGS = -Og -g3
-LFLAGS = -lgmp
+LFLAGS =  -L/usr/local/lib -Llib -lgmp -lrelic_s
 
 # Output file
 OUTPUT = out
@@ -47,10 +47,10 @@ ARGS =
 #CXX = clang++
 
 # Verbosity flag
-V = 0
+V = 1
 
 # Debug flag
-D = 0
+D = 1
 
 # Build dependencies flag
 DEPS = 1

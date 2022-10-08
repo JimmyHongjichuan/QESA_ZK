@@ -259,7 +259,7 @@ typedef ep_st *ep_t;
 #if EP_ADD == BASIC
 #define ep_neg(R, P)		ep_neg_basic(R, P)
 #elif EP_ADD == PROJC
-#define ep_neg(R, P)		ep_neg_projc(R, P)
+#define ep_neg(R, P)		ep_neg(R, P)
 #endif
 
 /**
@@ -285,7 +285,7 @@ typedef ep_st *ep_t;
 #if EP_ADD == BASIC
 #define ep_sub(R, P, Q)		ep_sub_basic(R, P, Q)
 #elif EP_ADD == PROJC
-#define ep_sub(R, P, Q)		ep_sub_projc(R, P, Q)
+#define ep_sub(R, P, Q)		ep_sub(R, P, Q)
 #endif
 
 /**
@@ -695,7 +695,7 @@ void ep_neg_basic(ep_t r, const ep_t p);
  * @param[out] r			- the result.
  * @param[in] p				- the point to negate.
  */
-void ep_neg_projc(ep_t r, const ep_t p);
+void ep_neg(ep_t r, const ep_t p);
 
 /**
  * Adds two prime elliptic curve points represented in affine coordinates.
@@ -744,7 +744,7 @@ void ep_sub_basic(ep_t r, const ep_t p, const ep_t q);
  * @param[in] p				- the first point.
  * @param[in] q				- the second point.
  */
-void ep_sub_projc(ep_t r, const ep_t p, const ep_t q);
+void ep_sub(ep_t r, const ep_t p, const ep_t q);
 
 /**
  * Doubles a prime elliptic curve point represented in affine coordinates.
